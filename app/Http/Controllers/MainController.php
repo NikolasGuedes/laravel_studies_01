@@ -15,4 +15,8 @@ class MainController extends Controller
     public function mostrarValor($valor){
          echo "O valor na rota é: $valor";
     }
+
+    public function about(){
+        echo "Rota About";
+    }
 }

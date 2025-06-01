@@ -15,6 +15,7 @@ class OnlyAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        echo '>>> ADMIN <br>';
         return $next($request);
     }
 }

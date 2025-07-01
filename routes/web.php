@@ -1,16 +1,10 @@
 <?php
 
 use App\Http\Controllers\MainController;
-use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/teste_orm', function(){
-    $products = Product::all();
-    echo'<pre>';
-    print_r($products->toArray());
-});
-
 Route::get('/', [MainController::class, 'index']);
+Route::get('/orm', [MainController::class, 'chamaModel'])->name('chamaModel');
 
 // Route::view('/view2', 'home', ['MyName' => "Nikolas Guedes"]);
 
